@@ -7,7 +7,7 @@ const Projects = ({ projects, title }) => (
       <ProjectTitle>Slack Clone (React)</ProjectTitle>
 
       <ProjectButtonWrapper>
-        <ProjectButton href='https://control-chat-v2-souleymane.herokuapp.com/' target='_blank'>View Site</ProjectButton>
+        <ProjectButton href='https://keen-swanson-105d13.netlify.com' target='_blank'>View Site</ProjectButton>
       </ProjectButtonWrapper>
     </ProjectWrapper>
 
