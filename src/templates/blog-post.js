@@ -24,7 +24,7 @@ class BlogPost extends React.Component {
           meta={[
             { name: 'description', content: `Check out this post ${ post.frontmatter.title } by Souleymane Dembele.` },
             { property: 'og:title', content: `${ post.frontmatter.title } | Souleymane Dembele` },
-            { property: 'og:url', content: `https://souleymanedembele.com/blog/${ post.fields.slug }` },
+            { property: 'og:url', content: `https://souleymanedembele.com/${ post.fields.slug }` },
           ]}
         />
         <GlobalStyle />
@@ -42,7 +42,7 @@ class BlogPost extends React.Component {
             href="https://twitter.com/intent/tweet"
             data-size="large"
             data-text={`${ post.frontmatter.title }`}
-            data-url={`https://souleymanedembele.com/blog/${ post.fields.slug }`}
+            data-url={`https://souleymanedembele.com/${ post.fields.slug }`}
             data-hashtags="EpicSociety,NarutoDev,Souleymane"
             data-via="souleymane"
             data-related="coding,react,javascript">
