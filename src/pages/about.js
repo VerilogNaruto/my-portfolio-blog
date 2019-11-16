@@ -9,7 +9,7 @@ const About = () => (
   <Layout>
     <PageTitle>About Me</PageTitle>
     <PageSubTitle>Software Engineer 🚀</PageSubTitle>
-    <p>Hi, my name is Souleymane Dembele I'm a college graduate and a self-taught developer. I'm currently live in Olympia, WA, but I'm originaly from Burkina Faso ☀️ West Africa. I like to build new projects with JavaScript and also share what I've learned throughout my career as a developer to other people. Outside of programming I like to watch TV, spend time with my family and friends, learn a new skill, and do fun stuff.</p>
+    <p>Hi, my name is Souleymane Dembele I'm a college graduate and a self-taught developer. I currently live in Seattle, WA, but I'm originaly from Burkina Faso ☀️ West Africa. I like to build new projects with JavaScript and also share what I've learned throughout my career as a developer to other people. Outside of programming I like to watch TV, spend time with my family and friends, learn a new skill, and do fun stuff.</p>
 
     <h2>Workflow </h2>
     <dl>

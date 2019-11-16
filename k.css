@@ -1,0 +1,31 @@
+body{
+    background: #111f4d;
+background: #e43a19;
+background: #616163;
+background: #f2f4f7;
+background: #FF8500;
+primary: '#FF8500',
+secondary: '#0091A0',
+background: '#FFFFFC',
+contentColor: '#616163',
+title: '#000',
+}
+
+
+export const themes = {
+    dark: {
+      primary: '#111f4d',
+      secondary: '#e43a19',
+      background: '#616163',
+      contentColor: '#f2f4f7',
+      title: '#ffffffd1',
+    },
+    main: {
+      primary: '#FF8500',
+      secondary: '#0091A0',
+      background: '#FFFFFC',
+      contentColor: '#616163',
+      title: '#000',
+    }
+  }
+  
