@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: 'Souleymane Dembele',
-    siteUrl: 'https://souleymanedembele.com',
+    siteUrl: 'https://www.souleymanedembele.com',
     menuLinks: [
       {
         name: 'Blog',
