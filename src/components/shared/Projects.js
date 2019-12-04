@@ -1,24 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
+import Preview from '../../images/Preview.svg';
 
 const Projects = ({ projects, title }) => (
   <div>
-      <Container className="container">
-    <Card className="card">
-      <Image src="//unsplash.it/400/400" alt="" className="card__img" />
-      <CardText className="card__text">
-        <CardTitle className="card__title">SlackClone</CardTitle>
-        <CardBody className="card__body">Realtime chat application using React, Managing state with Redux and Semantic UI and SASS for styling Component.</CardBody>
-      </CardText>
-    </Card>
-    <Card className="card">
-      <Image src="//unsplash.it/401/401" alt="" className="card__img" />
-      <CardText className="card__text">
-        <CardTitle className="card__title">Pathfindings</CardTitle>
-        <CardBody className="card__body">And here is some text</CardBody>
-      </CardText>
-    </Card>
-    {/* <ProjectWrapper>
+    <Container className="container">
+      <Card className="card">
+        <Image src="//unsplash.it/400/400" alt="" className="card__img" />
+        <CardText className="card__text">
+          <CardTitle className="card__title">SlackClone</CardTitle>
+          <CardBody className="card__body">
+            Realtime chat application using React, Managing state with Redux and
+            Semantic UI and SASS for styling Component.
+          </CardBody>
+        </CardText>
+      </Card>
+      <Card className="card">
+        <Image src="//unsplash.it/401/401" alt="" className="card__img" />
+        <CardText className="card__text">
+          <CardTitle className="card__title">Pathfindings</CardTitle>
+          <CardBody className="card__body">And here is some text</CardBody>
+        </CardText>
+      </Card>
+      {/* <ProjectWrapper>
       <ProjectTitle>Slack Clone (React)</ProjectTitle>
 
       <ProjectButtonWrapper>
@@ -65,23 +69,26 @@ const Projects = ({ projects, title }) => (
         <ProjectButton href='https://play.google.com/store/apps/details?id=com.spscc.mapApp' target='_blank'>View Site</ProjectButton>
       </ProjectButtonWrapper>
     </ProjectWrapper> */}
-  </Container>
-  <Container className="container">
-    <Card className="card">
-      <Image src="//unsplash.it/400/400" alt="" className="card__img" />
-      <CardText className="card__text">
-        <CardTitle className="card__title">ScavengerHunt</CardTitle>
-        <CardBody className="card__body">Realtime chat application using React, Managing state with Redux and Semantic UI and SASS for styling Component.</CardBody>
-      </CardText>
-    </Card>
-    <Card className="card">
-      <Image src="//unsplash.it/401/401" alt="" className="card__img" />
-      <CardText className="card__text">
-        <CardTitle className="card__title">FlowstateCreatives</CardTitle>
-        <CardBody className="card__body">And here is some text</CardBody>
-      </CardText>
-    </Card>
-    {/* <ProjectWrapper>
+    </Container>
+    <Container className="container">
+      <Card className="card">
+        <Image src="//unsplash.it/400/400" alt="" className="card__img" />
+        <CardText className="card__text">
+          <CardTitle className="card__title">ScavengerHunt</CardTitle>
+          <CardBody className="card__body">
+            Realtime chat application using React, Managing state with Redux and
+            Semantic UI and SASS for styling Component.
+          </CardBody>
+        </CardText>
+      </Card>
+      <Card className="card">
+        <Image src="//unsplash.it/401/401" alt="" className="card__img" />
+        <CardText className="card__text">
+          <CardTitle className="card__title">FlowstateCreatives</CardTitle>
+          <CardBody className="card__body">And here is some text</CardBody>
+        </CardText>
+      </Card>
+      {/* <ProjectWrapper>
       <ProjectTitle>Slack Clone (React)</ProjectTitle>
 
       <ProjectButtonWrapper>
@@ -128,22 +135,22 @@ const Projects = ({ projects, title }) => (
         <ProjectButton href='https://play.google.com/store/apps/details?id=com.spscc.mapApp' target='_blank'>View Site</ProjectButton>
       </ProjectButtonWrapper>
     </ProjectWrapper> */}
-  </Container>
+    </Container>
   </div>
-  
 );
 
 const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 `;
 const Card = styled.div`
-    position: relative;
-    margin: 1em;
-    background: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
+  position: relative;
+  margin: 1em;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
   &::before,
   &::after {
     content: '';
@@ -185,30 +192,33 @@ const Card = styled.div`
   }
 `;
 const CardText = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: white;
-    opacity: 0;
-    transition: opacity ease-out 250ms;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  transition: opacity ease-out 250ms;
+//   background-image: url(${Preview});
+//   background-repeat: no-repeat;
+// background-position: center;
+// background-size: cover;
 `;
 
 const CardTitle = styled.h3`
   font-size: 2rem;
   color: white;
   margin-bottom: 0;
-`
+`;
 
 const CardBody = styled.p`
-color: white;
-`
+  color: white;
+`;
 const Image = styled.img`
-    max-width: 100%;
-    display: block;
-    transition: opacity ease-out 250ms;
-
+  max-width: 100%;
+  display: block;
+  transition: opacity ease-out 250ms;
 `;
 
 {
