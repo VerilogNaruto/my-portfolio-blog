@@ -45,6 +45,8 @@ class ThemeProvider extends React.PureComponent {
     )
   }
 }
-const Transition = sty
+const Transition = styled.div`
+width: 100%;
+`
 export default ThemeContext
 export { ThemeProvider }
