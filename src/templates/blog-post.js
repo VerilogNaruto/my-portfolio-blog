@@ -1,30 +1,39 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { createGlobalStyle } from 'styled-components'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { createGlobalStyle } from 'styled-components';
 
-import Layout from '../containers/Layout'
-import { PageTitle } from '../components/shared/Text'
+import Layout from '../containers/Layout';
+import { PageTitle } from '../components/shared/Text';
 
 class BlogPost extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     if (typeof window.twttr.widgets !== 'undefined') {
-      window.twttr.widgets.load()
+      window.twttr.widgets.load();
     }
   }
 
-  render () {
-    const post = this.props.data.mdx
+  render() {
+    const post = this.props.data.mdx;
 
     return (
       <Layout>
         <Helmet
-          title={`${ post.frontmatter.title } | Shakhor`}
+          title={`${post.frontmatter.title} | Souleymane`}
           meta={[
-            { name: 'description', content: `Check out this post ${ post.frontmatter.title } by Souleymane Dembele.` },
-            { property: 'og:title', content: `${ post.frontmatter.title } | Souleymane Dembele` },
-            { property: 'og:url', content: `https://souleymanedembele.com/${ post.fields.slug }` },
+            {
+              name: 'description',
+              content: `Check out this post ${post.frontmatter.title} by Souleymane Dembele.`,
+            },
+            {
+              property: 'og:title',
+              content: `${post.frontmatter.title} | Souleymane Dembele`,
+            },
+            {
+              property: 'og:url',
+              content: `https://souleymanedembele.com/${post.fields.slug}`,
+            },
           ]}
         />
         <GlobalStyle />
@@ -34,31 +43,31 @@ class BlogPost extends React.Component {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            padding: '20px 0'
+            padding: '20px 0',
           }}
         >
-          <a className="twitter-share-button"
+          <a
+            className="twitter-share-button"
             style={{ marginBottom: 0 }}
             href="https://twitter.com/intent/tweet"
             data-size="large"
-            data-text={`${ post.frontmatter.title }`}
-            data-url={`https://souleymanedembele.com/${ post.fields.slug }`}
+            data-text={`${post.frontmatter.title}`}
+            data-url={`https://souleymanedembele.com${post.fields.slug}`}
             data-hashtags="EpicSociety,NarutoDev,Souleymane"
             data-via="souleymane"
-            data-related="coding,react,javascript">
+            data-related="coding,react,javascript"
+          >
             Tweet
           </a>
         </div>
 
-        <MDXRenderer>
-          {post.body}
-        </MDXRenderer>
+        <MDXRenderer>{post.body}</MDXRenderer>
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPost
+export default BlogPost;
 
 export const query = graphql`
   query($id: String!) {
@@ -72,7 +81,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const GlobalStyle = createGlobalStyle`
   code {
@@ -83,4 +92,4 @@ const GlobalStyle = createGlobalStyle`
     display: block;
     margin: 10px auto;
   }
-`
+`;
