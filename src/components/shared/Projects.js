@@ -5,7 +5,11 @@ import Preview from '../../images/Preview.svg';
 const Projects = ({ projects, title }) => (
   <div>
     <Container className="container">
-      <Card className="card">
+      <Card
+        href="https://keen-swanson-105d13.netlify.com"
+        target="_blank"
+        className="card"
+      >
         <Image src="//unsplash.it/400/400" alt="" className="card__img" />
         <CardText className="card__text">
           <CardTitle className="card__title">SlackClone</CardTitle>
@@ -13,65 +17,28 @@ const Projects = ({ projects, title }) => (
             Realtime chat application using React, Managing state with Redux and
             Semantic UI and SASS for styling Component.
           </CardBody>
+          <ProjectTag>React, Redux, Sass, Firebase</ProjectTag>
         </CardText>
       </Card>
-      <Card className="card">
+      <Card
+        href="https://naruto958.github.io/Pathfinding/"
+        target="_blank"
+        className="card"
+      >
         <Image src="//unsplash.it/401/401" alt="" className="card__img" />
         <CardText className="card__text">
           <CardTitle className="card__title">Pathfindings</CardTitle>
           <CardBody className="card__body">And here is some text</CardBody>
+          <ProjectTag>Html, Css, Bootstrap, Js, Jquery</ProjectTag>
         </CardText>
       </Card>
-      {/* <ProjectWrapper>
-      <ProjectTitle>Slack Clone (React)</ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://keen-swanson-105d13.netlify.com' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper>
-
-    <ProjectWrapper>
-      <ProjectTitle>Pathfindings Algo</ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://naruto958.github.io/Pathfinding/' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper>
-
-    <ProjectWrapper>
-      <ProjectTitle>Old Portfolio (NuxtJs)</ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://sdembele.me/' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper>
-
-    <ProjectWrapper>
-      <ProjectTitle>Flowstate Creatives</ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://flowstatecreatives.com/' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper>
-
-    <ProjectWrapper>
-      <ProjectTitle>Control Dev</ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://control-website-0.herokuapp.com/' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper>
-
-    <ProjectWrapper>
-      <ProjectTitle>Scavenger Hunt </ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://play.google.com/store/apps/details?id=com.spscc.mapApp' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper> */}
     </Container>
     <Container className="container">
-      <Card className="card">
+      <Card
+        href="https://play.google.com/store/apps/details?id=com.spscc.mapApp"
+        target="_blank"
+        className="card"
+      >
         <Image src="//unsplash.it/400/400" alt="" className="card__img" />
         <CardText className="card__text">
           <CardTitle className="card__title">ScavengerHunt</CardTitle>
@@ -79,62 +46,21 @@ const Projects = ({ projects, title }) => (
             Realtime chat application using React, Managing state with Redux and
             Semantic UI and SASS for styling Component.
           </CardBody>
+          <ProjectTag>PhoneGap Cordova, Jquery, Css3</ProjectTag>
         </CardText>
       </Card>
-      <Card className="card">
+      <Card
+        href="https://flowstatecreatives.com/"
+        target="_blank"
+        className="card"
+      >
         <Image src="//unsplash.it/401/401" alt="" className="card__img" />
         <CardText className="card__text">
           <CardTitle className="card__title">FlowstateCreatives</CardTitle>
           <CardBody className="card__body">And here is some text</CardBody>
+          <ProjectTag>Wordpress, Html, Sass, Jquery</ProjectTag>
         </CardText>
       </Card>
-      {/* <ProjectWrapper>
-      <ProjectTitle>Slack Clone (React)</ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://keen-swanson-105d13.netlify.com' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper>
-
-    <ProjectWrapper>
-      <ProjectTitle>Pathfindings Algo</ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://naruto958.github.io/Pathfinding/' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper>
-
-    <ProjectWrapper>
-      <ProjectTitle>Old Portfolio (NuxtJs)</ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://sdembele.me/' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper>
-
-    <ProjectWrapper>
-      <ProjectTitle>Flowstate Creatives</ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://flowstatecreatives.com/' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper>
-
-    <ProjectWrapper>
-      <ProjectTitle>Control Dev</ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://control-website-0.herokuapp.com/' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper>
-
-    <ProjectWrapper>
-      <ProjectTitle>Scavenger Hunt </ProjectTitle>
-
-      <ProjectButtonWrapper>
-        <ProjectButton href='https://play.google.com/store/apps/details?id=com.spscc.mapApp' target='_blank'>View Site</ProjectButton>
-      </ProjectButtonWrapper>
-    </ProjectWrapper> */}
     </Container>
   </div>
 );
@@ -146,7 +72,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 `;
-const Card = styled.div`
+const Card = styled.a`
   position: relative;
   margin: 1em;
   background: rgba(0, 0, 0, 0.7);
@@ -219,61 +145,40 @@ const Image = styled.img`
   max-width: 100%;
   display: block;
   transition: opacity ease-out 250ms;
+  margin:0;
 `;
 
-{
-  /* const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`
-
-const ProjectWrapper = styled.div`
-  display: flex;
-  width: 350px;
-  height: 450px;
-  margin: 30px 0;
-  background-color: inherit;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  align-items: center;
-`
-
-const ProjectTitle = styled.h4`
-  margin: 0;
-`
+const ProjectSummary = styled.p`
+  text-align: center;
+  margin-top: 10px;
+`;
 const ProjectButtonWrapper = styled.div`
   flex: 1;
   display: flex;
   justify-content: flex-end;
-`
-
-const ProjectButton = styled.a`
-  height: 40px;
-  border: 2px solid ${ props => props.theme.secondary };
-  padding: 5px 15px;
-  font-size: .87rem;
-`
-
+  
+`;
 const ProjectTag = styled.small`
-  background-color: ${ props => props.theme.secondary };
+  background-color: ${props => props.theme.secondary};
   border: none;
   border-radius: 15px;
   color: white;
   margin: 0 auto;
   height: 30px;
-  max-width: 200px;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
-`
+  padding-left: .1rem;
+  padding-right: .1rem;
+`;
 
-const ProjectSummary = styled.p`
-  text-align: center;
-  margin-top: 10px;
-` */
-}
+const ProjectButton = styled.a`
+  height: 40px;
+  border: 2px solid ${props => props.theme.secondary};
+  padding: 5px 15px;
+  font-size: 0.87rem;
+`;
 
 export default Projects;
