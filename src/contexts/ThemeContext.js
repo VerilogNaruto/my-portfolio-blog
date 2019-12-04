@@ -1,5 +1,5 @@
 import React from 'react'
-
+import styled from 'styled-components';
 const defaultState = {
   theme: 'main',
   toggleTheme: {}
@@ -38,11 +38,13 @@ class ThemeProvider extends React.PureComponent {
           toggleTheme: this.toggleTheme,
         }}
       >
+        <Transition>
         {this.props.children}
+        </Transition>
       </ThemeContext.Provider>
     )
   }
 }
-
+const Transition = sty
 export default ThemeContext
 export { ThemeProvider }
