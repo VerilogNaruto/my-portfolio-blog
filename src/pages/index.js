@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-
 import { PageTitle } from '../components/shared/Text'
 import Layout from '../containers/Layout'
 import Button from '../components/shared/Button'
