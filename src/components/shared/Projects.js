@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Preview from '../../images/Preview.svg';
+import SlackClone from '../../images/slackclone.png';
+import ScavengerHunt from '../../images/scqvenger.png';
+import Pathfinding from '../../images/pathfinging.png';
+import Flowstate from '../../images/flowstate.png';
 
 const Projects = ({ projects, title }) => (
   <div>
@@ -10,7 +14,7 @@ const Projects = ({ projects, title }) => (
         target="_blank"
         className="card"
       >
-        <Image src="//unsplash.it/400/400" alt="" className="card__img" />
+        <Image src={SlackClone} alt="" className="card__img" />
         <CardText className="card__text">
           <CardTitle className="card__title">SlackClone</CardTitle>
           <CardBody className="card__body">
@@ -25,7 +29,7 @@ const Projects = ({ projects, title }) => (
         target="_blank"
         className="card"
       >
-        <Image src="//unsplash.it/401/401" alt="" className="card__img" />
+        <Image src={Pathfinding} alt="" className="card__img" />
         <CardText className="card__text">
           <CardTitle className="card__title">Pathfindings</CardTitle>
           <CardBody className="card__body">And here is some text</CardBody>
@@ -39,7 +43,7 @@ const Projects = ({ projects, title }) => (
         target="_blank"
         className="card"
       >
-        <Image src="//unsplash.it/400/400" alt="" className="card__img" />
+        <Image src={ScavengerHunt} alt="" className="card__img" />
         <CardText className="card__text">
           <CardTitle className="card__title">ScavengerHunt</CardTitle>
           <CardBody className="card__body">
@@ -54,7 +58,7 @@ const Projects = ({ projects, title }) => (
         target="_blank"
         className="card"
       >
-        <Image src="//unsplash.it/401/401" alt="" className="card__img" />
+        <Image src={Flowstate} alt="" className="card__img" />
         <CardText className="card__text">
           <CardTitle className="card__title">FlowstateCreatives</CardTitle>
           <CardBody className="card__body">And here is some text</CardBody>
