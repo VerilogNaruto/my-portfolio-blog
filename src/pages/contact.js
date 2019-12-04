@@ -43,7 +43,9 @@ const EmailForm = styled.form`
   width: 100%;
 `;
 
-const Label = styled.label``;
+const Label = styled.label`
+color: ${props => props.theme.title};
+`;
 const Textarea = styled.textarea`
   width: 100%;
   height: 8rem;
