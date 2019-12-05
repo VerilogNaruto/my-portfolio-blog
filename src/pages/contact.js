@@ -160,7 +160,7 @@ const Button = styled.button`
   background-image: none;
   border: none;
   color: #fffffc;
-  width: 150px;
+  width: 100%;
   height: 45px;
   border-radius: 75px;
   margin-top: ${props => (props.section ? '15px' : '5px')};
