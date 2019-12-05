@@ -10,6 +10,29 @@ export default class Contact extends React.Component {
     message: '',
   };
 
+  async postEmail(url, method = 'POST', payload = {}) {
+    let data = {
+      method,
+      body: JSON.stringify(payload),
+      headers: new Headers({
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ',
+      }),
+    };
+
+    let response = await fetch(url, data);
+    if (response.ok) {
+      let contentType = response.headers.get('Content-Type');
+
+      if (contentType.indexOf('application/json') > -1) {
+        return response.json();
+      }
+
+      return response.statusText;
+    }
+    throw response;
+  }
+
   handleInputChange = event => {
     const target = event.target;
     const value = target.value;
@@ -21,7 +44,21 @@ export default class Contact extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    alert(`Welcome ${this.state.name} ${this.state.email}!  ${this.state.message}`);
+    let email = this.postEmail(
+      'https://souleymanedembelebackend.herokuapp.com/api/contact',
+      'POST',
+      {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message,
+      },
+    );
+
+    alert(email)
+
+    alert(
+      `Welcome ${this.state.name} ${this.state.email}!  ${this.state.message}`,
+    );
   };
 
   render() {
