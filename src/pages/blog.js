@@ -5,14 +5,21 @@ import Layout from '../containers/Layout'
 import Posts from '../components/shared/Posts'
 import { PageTitle } from '../components/shared/Text'
 
-const Blog = ({ data }) => (
-  <Layout>
+export default class Blog extends React.Component {
+
+  render() {
+    const {data} = this.props
+    return (
+      <Layout>
     <PageTitle>Blog</PageTitle>
     <Posts
       posts={data.allMdx.edges}
     />
   </Layout>
-)
+    )
+  }
+}
+
 
 export const query = graphql`
   query {
@@ -45,5 +52,3 @@ export const query = graphql`
     }
   }
 `
-
-export default Blog
