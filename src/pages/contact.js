@@ -42,9 +42,9 @@ export default class Contact extends React.Component {
     });
   };
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
-    let email = this.postEmail(
+    let email = await this.postEmail(
       'https://souleymanedembelebackend.herokuapp.com/api/contact',
       'POST',
       {
@@ -54,7 +54,7 @@ export default class Contact extends React.Component {
       },
     );
 
-    alert(email)
+    console.log(email.message);
 
     alert(
       `Welcome ${this.state.name} ${this.state.email}!  ${this.state.message}`,
