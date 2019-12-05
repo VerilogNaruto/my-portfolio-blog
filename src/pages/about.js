@@ -7,8 +7,7 @@ import Projects from '../components/shared/Projects';
 
 export default class About extends React.Component {
   state = {
-    firstName: '',
-    lastName: '',
+    
   };
   render() {
     return (

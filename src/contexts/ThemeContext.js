@@ -9,12 +9,10 @@ const ThemeContext = React.createContext(defaultState)
 class ThemeProvider extends React.PureComponent {
   state = {
     theme: 'main',
-    TransitionVisible: ''
   };
 
   componentDidMount () {
     const theme = JSON.parse(window.localStorage.getItem('theme'))
-      this.setState({ TransitionVisible: 'visible' })
     if (theme) {
       if (theme === 'main') {
         this.setState({ theme: 'main' })
@@ -32,7 +30,6 @@ class ThemeProvider extends React.PureComponent {
   }
 
   render () {
-    const { TransitionVisible } = this.state
     return (
       <ThemeContext.Provider
         value={{
@@ -40,19 +37,11 @@ class ThemeProvider extends React.PureComponent {
           toggleTheme: this.toggleTheme,
         }}
       >
-        <Transition visible={TransitionVisible}>
         {this.props.children}
-        </Transition>
       </ThemeContext.Provider>
     )
   }
 }
-
-const Transition = styled.div`
-width: 100%;
-opacity:  ${props => props.visible ? "1" : "0"};
-transition: all 1s ease-out;
-`
 
 export default ThemeContext
 export { ThemeProvider }

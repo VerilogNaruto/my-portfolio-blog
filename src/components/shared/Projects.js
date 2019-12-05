@@ -60,7 +60,7 @@ const Projects = ({ projects, title }) => (
       >
         <Image src={Flowstate} alt="" className="card__img" />
         <CardText className="card__text">
-          <CardTitle className="card__title">FlowstateCreatives</CardTitle>
+          <CardTitle className="card__title">Flowstate</CardTitle>
           <CardBody className="card__body">And here is some text</CardBody>
           <ProjectTag>Wordpress, Html, Sass, Jquery</ProjectTag>
         </CardText>
@@ -125,6 +125,7 @@ const CardText = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  width:80%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: white;
@@ -139,11 +140,19 @@ const CardText = styled.div`
 const CardTitle = styled.h3`
   font-size: 2rem;
   color: white;
+  width:100%;
   margin-bottom: 0;
+  @media only screen and (max-width: 600px) {
+    font-size: 1rem;
+    width:100%;
+  }
 `;
 
 const CardBody = styled.p`
   color: white;
+  @media only screen and (max-width: 600px) {
+    font-size: .8rem;
+  }
 `;
 const Image = styled.img`
   max-width: 100%;
@@ -176,6 +185,10 @@ const ProjectTag = styled.small`
   font-weight: 600;
   padding-left: .1rem;
   padding-right: .1rem;
+  @media only screen and (max-width: 600px) {
+    font-size: .8rem;
+    width: 100%;
+  }
 `;
 
 const ProjectButton = styled.a`
