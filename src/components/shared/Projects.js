@@ -18,8 +18,7 @@ const Projects = ({ projects, title }) => (
         <CardText className="card__text">
           <CardTitle className="card__title">SlackClone</CardTitle>
           <CardBody className="card__body">
-            Realtime chat application using React, Managing state with Redux and
-            Semantic UI and SASS for styling Component.
+            Realtime chat application using React and Redux.
           </CardBody>
           <ProjectTag>React, Redux, Sass, Firebase</ProjectTag>
         </CardText>
@@ -32,8 +31,8 @@ const Projects = ({ projects, title }) => (
         <Image src={Pathfinding} alt="" className="card__img" />
         <CardText className="card__text">
           <CardTitle className="card__title">Pathfindings</CardTitle>
-          <CardBody className="card__body">And here is some text</CardBody>
-          <ProjectTag>Html, Css, Bootstrap, Js, Jquery</ProjectTag>
+          <CardBody className="card__body">Pathfindings Algorithms and Recursive Maze</CardBody>
+          <ProjectTag>Html, Css, Bootstrap, Jquery</ProjectTag>
         </CardText>
       </Card>
     </Container>
@@ -47,10 +46,9 @@ const Projects = ({ projects, title }) => (
         <CardText className="card__text">
           <CardTitle className="card__title">ScavengerHunt</CardTitle>
           <CardBody className="card__body">
-            Realtime chat application using React, Managing state with Redux and
-            Semantic UI and SASS for styling Component.
+            Geolocation crossplatform app using PhoneGap Cordova
           </CardBody>
-          <ProjectTag>PhoneGap Cordova, Jquery, Css3</ProjectTag>
+          <ProjectTag>PhoneGap, Jquery, Css3</ProjectTag>
         </CardText>
       </Card>
       <Card
@@ -61,7 +59,7 @@ const Projects = ({ projects, title }) => (
         <Image src={Flowstate} alt="" className="card__img" />
         <CardText className="card__text">
           <CardTitle className="card__title">Flowstate</CardTitle>
-          <CardBody className="card__body">And here is some text</CardBody>
+          <CardBody className="card__body">Angency landing page build with Wordpress</CardBody>
           <ProjectTag>Wordpress, Html, Sass, Jquery</ProjectTag>
         </CardText>
       </Card>
@@ -131,6 +129,7 @@ const CardText = styled.div`
   color: white;
   opacity: 0;
   transition: opacity ease-out 250ms;
+
 //   background-image: url(${Preview});
 //   background-repeat: no-repeat;
 // background-position: center;
