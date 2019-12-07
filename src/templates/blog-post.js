@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import { createGlobalStyle } from 'styled-components';
 import Layout from '../containers/Layout';
 import { PageTitle } from '../components/shared/Text';
+import Prism from "prismjs";
 
 class BlogPost extends React.Component {
   componentDidMount() {
