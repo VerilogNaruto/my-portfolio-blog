@@ -9,7 +9,11 @@ export default class About extends React.Component {
   state = {
     
   };
+
+
+  
   render() {
+
     return (
       <Layout>
         <PageTitle>About Me</PageTitle>

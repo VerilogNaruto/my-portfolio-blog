@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
-
+import Prism from "prismjs"
 import ThemeContext from '../contexts/ThemeContext';
 import Header from '../components/shared/Header';
 import { themes } from '../theme/globalStyles';
@@ -15,7 +15,9 @@ export default class Layout extends React.Component {
   
   componentDidMount(){
     this.setState({transition: 'visible'})
+    Prism.highlightAll()
   }
+
   render() {
     const { children } = this.props
     const { transition } = this.state

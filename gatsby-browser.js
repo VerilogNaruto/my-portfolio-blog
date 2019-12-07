@@ -7,7 +7,7 @@ require('prismjs/themes/prism-okaidia.css')
 
 const components = {
   pre: props => <div {...props} />,
-  code: CodeBlock,
+  // code: CodeBlock,
 }
 
 export const wrapRootElement = ({ element }) => (
