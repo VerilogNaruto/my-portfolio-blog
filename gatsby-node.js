@@ -4,7 +4,7 @@ const { format } = require('date-fns');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  console.log(node.internal.type);
+  // console.log(node.internal.type);
   // if (node.internal.type === `wordpress__POST`) {
   //   const slug = createFilePath({ node, getNode, basePath: `posts` })
   //   createNodeField({
