@@ -12,8 +12,8 @@ const components = {
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider>
-    <MDXProvider components={components}>
+    <div components={components}>
       {element}
-    </MDXProvider>
+    </div>
   </ThemeProvider>
 )
