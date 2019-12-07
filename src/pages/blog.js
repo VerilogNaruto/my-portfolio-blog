@@ -13,40 +13,22 @@ export default class Blog extends React.Component {
       <Layout>
     <PageTitle>Blog</PageTitle>
     <Posts
-      posts={data.allMdx.edges}
+      posts={data.allWordpressPost.edges}
     />
   </Layout>
     )
   }
 }
 
-
 export const query = graphql`
   query {
-    allMdx (sort: { fields: [fields___publishedAt], order: DESC }) {
+    allWordpressPost {
       edges {
-        next {
-          frontmatter {
-            title
-            date
-          }
-        }
-        previous {
-          frontmatter {
-            title
-            date
-          }
-        }
         node {
-          id
-          frontmatter {
-            title
-            date
-          }
-          fields {
-            publishedAt
-            slug
-          }
+        id
+        slug
+        title
+        date
         }
       }
     }

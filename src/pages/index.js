@@ -29,7 +29,7 @@ export default class IndexPage extends React.Component {
 
         <Section>
           <SectionTitle>Latest Posts</SectionTitle>
-          <Posts posts={data.allMdx.edges} />
+          <Posts posts={data.allWordpressPost.edges} />
           <Button to="/blog" section="true">
             View All
           </Button>
@@ -46,27 +46,13 @@ export default class IndexPage extends React.Component {
 
 export const query = graphql`
   query {
-    allMdx(sort: { fields: [fields___publishedAt], order: DESC }, limit: 5) {
+    allWordpressPost {
       edges {
-        next {
-          frontmatter {
-            title
-          }
-        }
-        previous {
-          frontmatter {
-            title
-          }
-        }
         node {
-          id
-          frontmatter {
-            title
-          }
-          fields {
-            publishedAt
-            slug
-          }
+        id
+        slug
+        title
+        date
         }
       }
     }

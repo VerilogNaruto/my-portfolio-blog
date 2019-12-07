@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+const { format } = require('date-fns')
 
 const Posts = ({ posts }) => (
   <div
@@ -13,13 +14,15 @@ const Posts = ({ posts }) => (
     {posts.map(post => {
       const {
         id,
-        fields: { slug, publishedAt },
-        frontmatter: { title }
+        slug,
+        title,
+        date
       } = post.node
 
       return (
         <Link
-          to={slug}
+        
+          to={`/blog/${ slug }`}
           key={id}
         >
           <article
@@ -41,7 +44,7 @@ const Posts = ({ posts }) => (
                 textAlign: 'right',
               }}
             >
-              {publishedAt}
+              {format(new Date(date), 'MMM dd, yyyy')}
             </Published>
           </article>
         </Link>

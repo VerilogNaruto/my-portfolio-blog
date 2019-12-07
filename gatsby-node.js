@@ -1,49 +1,49 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
-const { format } = require('date-fns')
+const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
+const { format } = require('date-fns');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === `Mdx`) {
-    const slug = createFilePath({ node, getNode, basePath: `posts` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: `/blog${ slug }`,
-    })
-    createNodeField({
-      node,
-      name: `publishedAt`,
-      value: format(new Date(node.frontmatter.date), 'MMM dd, yyyy'),
-    })
-  }
-}
+  const { createNodeField } = actions;
+  console.log(node.internal.type);
+  // if (node.internal.type === `wordpress__POST`) {
+  //   const slug = createFilePath({ node, getNode, basePath: `posts` })
+  //   createNodeField({
+  //     node,
+  //     name: `slug`,
+  //     value: `/blog${ slug }`,
+  //   })
+  //   createNodeField({
+  //     node,
+  //     name: `date`,
+  //     value: format(new Date(node.date), 'MMM dd, yyyy'),
+  //   })
+  // }
+};
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMdx {
+        allWordpressPost {
           edges {
             node {
               id
-              fields {
-                slug
-              }
+              slug
+              date
             }
           }
         }
       }
     `).then(result => {
-      result.data.allMdx.edges.forEach(({ node }) => {
+      result.data.allWordpressPost.edges.forEach(({ node }) => {
         createPage({
-          path: node.fields.slug,
+          path: `/blog/${node.slug}`,
           component: path.resolve(`./src/templates/blog-post.js`),
           context: { id: node.id },
-        })
-      })
-      resolve()
-    })
-  })
-}
+        });
+      });
+      resolve();
+    });
+  });
+};

@@ -93,5 +93,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        baseUrl: `34.83.43.160/`,
+        protocol: 'http',
+        hostingWPCOM: false,
+      }
+    },
   ],
 }
