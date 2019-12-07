@@ -10,7 +10,7 @@ import { themes } from '../theme/globalStyles';
 
 export default class Layout extends React.Component {
   state = {
-    transition: ''
+    transition: 'visible'
   }
   
   componentDidMount(){
