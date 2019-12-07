@@ -3,7 +3,7 @@ import { MDXProvider } from '@mdx-js/react'
 
 import CodeBlock from './src/utils/CodeBlock'
 import { ThemeProvider } from './src/contexts/ThemeContext'
-require('prismjs/themes/prism-okaidia.css')
+// require('prismjs/themes/prism-okaidia.css')
 
 const components = {
   pre: props => <div {...props} />,

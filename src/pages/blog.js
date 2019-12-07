@@ -29,6 +29,9 @@ export const query = graphql`
         slug
         title
         date
+        featured_media{
+          source_url
+        }
         }
       }
     }

@@ -59,7 +59,9 @@ class BlogPost extends React.Component {
             Tweet
           </a>
         </div>
-
+        {post.featured_media.source_url && (
+          <img className="featured__image" alt={post.title} src={post.featured_media.source_url} />
+        )}
         <div
           dangerouslySetInnerHTML={{
             __html: post.content
@@ -78,6 +80,9 @@ export const query = graphql`
       content
       title
       slug
+      featured_media{
+          source_url
+        }
     }
   }
 `;
@@ -90,5 +95,9 @@ const GlobalStyle = createGlobalStyle`
   img {
     display: block;
     margin: 10px auto;
+  }
+
+  .featured__image{
+    width: 30vw;
   }
 `;
