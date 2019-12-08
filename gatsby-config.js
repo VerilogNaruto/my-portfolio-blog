@@ -96,8 +96,8 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `34.83.43.160/`,
-        protocol: 'http',
+        baseUrl: `www.leafdev.io/`,
+        protocol: 'https',
         hostingWPCOM: false,
       }
     },
