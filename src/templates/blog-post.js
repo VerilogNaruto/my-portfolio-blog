@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { createGlobalStyle } from 'styled-components';
 import Layout from '../containers/Layout';
 import { PageTitle } from '../components/shared/Text';
-import Prism from "prismjs";
+import Prism from 'prismjs';
 
 class BlogPost extends React.Component {
   componentDidMount() {
@@ -60,11 +60,19 @@ class BlogPost extends React.Component {
           </a>
         </div>
         {post.featured_media.source_url && (
-          <img className="featured__image" alt={post.title} src={post.featured_media.source_url} />
+          <img
+            className="featured__image"
+            alt={post.title}
+            src={
+              post.featured_media.source_url
+                ? post.featured_media.source_url
+                : ''
+            }
+          />
         )}
         <div
           dangerouslySetInnerHTML={{
-            __html: post.content
+            __html: post.content,
           }}
         />
       </Layout>
@@ -80,9 +88,9 @@ export const query = graphql`
       content
       title
       slug
-      featured_media{
-          source_url
-        }
+      featured_media {
+        source_url
+      }
     }
   }
 `;
@@ -98,6 +106,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .featured__image{
-    width: 30vw;
+    width: 20rem;
   }
 `;
